@@ -9,6 +9,11 @@ window.BackbonePortfolio = {
     init: function () {
         'use strict';
         console.log('Hello from Backbone!');
+        this.Router    = new BackbonePortfolio.Routers.App();
+        this.Posts     = new BackbonePortfolio.Collections.Posts();
+        this.Projects  = new BackbonePortfolio.Collections.Projects();
+
+        Backbone.history.start();
     }
 };
 
