@@ -9,20 +9,20 @@ BackbonePortfolio.Views = BackbonePortfolio.Views || {};
 
         template: JST['app/scripts/templates/post.ejs'],
 
-        tagName: 'div',
+        tagName: 'li',
 
-        id: '',
-
-        className: '',
+        className: 'post',
 
         events: {},
 
-        initialize: function () {
+        initialize: function (model) {
+            this.model = model;
             this.listenTo(this.model, 'change', this.render);
         },
 
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
+            return this;
         }
 
     });
