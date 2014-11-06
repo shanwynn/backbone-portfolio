@@ -13,16 +13,18 @@ BackbonePortfolio.Views = BackbonePortfolio.Views || {};
 
         id: '',
 
-        className: '',
+        className: 'project',
 
         events: {},
 
-        initialize: function () {
+        initialize: function (model) {
+            this.model = model;
             this.listenTo(this.model, 'change', this.render);
         },
 
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
+            return this;
         }
 
     });

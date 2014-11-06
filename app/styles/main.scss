@@ -2,6 +2,8 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstr
 
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 
+$font-main: 'Cuprum', sans-serif, verdana;
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -29,18 +31,58 @@ header {
     margin-bottom: 10px;
     h1 {
       display: inline-block;
+      font-family: $font-main;
+      color: #53005A;
     }
     nav {
       display: inline-block;
+      font-family: $font-main;
+      font-size: 1.5em;
       ul li {
         list-style: none;
         float: left;
-        padding-left: 15px;
+        padding-left: 25px;
       }
     }
 }
 
-#newPost {
+img {
+	width: 25%;
+	height: auto;
+  margin-left: 20px;
+  margin-top: 10px;
+  border:5px solid #53005A;
+}
+
+.bio {
+  display: inline-block;
+  margin-left: 30%;
+  margin-right: 10%;
+  margin-top: -250px;
+  vertical-align: top;
+  font-family: $font-main;
+  font-size: 1.5em;
+}
+
+#posts-container {
+  list-style: none;
+}
+
+p, aside {
+  margin-left: 20px;
+}
+
+a:visited, a:hover {
+  text-decoration: none;
+  color: #ABA2AD;
+}
+
+a:link, a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+#newPost, #newPortfolio {
   width: 70%;
   margin: 0 auto;
 }
